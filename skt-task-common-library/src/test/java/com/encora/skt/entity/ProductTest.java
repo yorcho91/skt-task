@@ -8,6 +8,13 @@ public class ProductTest {
     private final Product product = new Product();
 
     @Test
+    public void allArgsConstructor () {
+        assertThat(new Product(0, "sku", "name", "description"))
+            .extracting("id", "sku", "name", "description")
+            .containsExactly(0L, "sku", "name", "description");
+    }
+
+    @Test
     public void id () {
         assertThat(product.setId(1).getId())
             .isEqualTo(1L);

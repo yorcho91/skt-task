@@ -1,0 +1,13 @@
+server:
+  port: 27004
+
+spring:
+  datasource:
+    driverClassName: org.mariadb.jdbc.Driver
+    url: jdbc:mariadb://localhost:27001/productdb
+    username: mariadb
+    password: mariadb
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQLDialect
