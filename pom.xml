@@ -20,6 +20,7 @@
     <modules>
         <module>skt-task-common-library</module>
         <module>skt-task-microservice</module>
+        <module>skt-task-management-app</module>
     </modules>
 
     <properties>
