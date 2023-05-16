@@ -11,3 +11,9 @@ services:
       - '27001:3306'
     volumes:
       - ./sql:/docker-entrypoint-initdb.d
+
+  queue:
+    image: rabbitmq:3-management-alpine
+    ports:
+      - 27002:5672
+      - 27003:15672

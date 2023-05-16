@@ -11,3 +11,12 @@ spring:
     properties:
       hibernate:
         dialect: org.hibernate.dialect.MySQLDialect
+  rabbitmq:
+    host: localhost
+    port: 27002
+    username: guest
+    password: guest
+
+product:
+  saved: Product saved
+  error: Error saving product
