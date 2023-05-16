@@ -17,4 +17,8 @@ public interface ProductRepository
     @Transactional
     @Query(value = "call insert_product(?, ?, ?)", nativeQuery = true)
     void insertProduct(String sku, String name, String description);
+
+    @Transactional
+    Long deleteBySku(String sku);
+
 }
