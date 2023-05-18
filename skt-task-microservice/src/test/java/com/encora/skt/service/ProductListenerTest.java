@@ -33,6 +33,9 @@ public class ProductListenerTest {
     @Autowired
     ProductRepository repository;
 
+    @Autowired
+    ProductListener productListener;
+
     Product product = new Product(
         0,
         "ProductListener",
@@ -59,6 +62,14 @@ public class ProductListenerTest {
             .asList()
             .extracting("sku")
             .contains(product.getSku());
+    }
+
+    @Test
+    public void listProductsDirectly() {
+        assertThat(productListener.listProducts())
+                .asList()
+                .extracting("sku")
+                .contains(product.getSku());
     }
 
     @Test
